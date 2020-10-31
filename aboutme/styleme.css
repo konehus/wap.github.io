@@ -1,0 +1,43 @@
+body{
+    background-color:rgba(137, 158, 17, 0.842);
+    font-size: 16pt; 
+  }
+  h1,h2{
+    color: rgb(122, 58, 58);
+}
+strong{
+    font-family: Arial ;
+    color:rgba(255, 174, 0, 0.877)
+}
+h1{
+    text-align: center;
+}
+#happy, #sad{
+    height: 200px;
+    width: 250px;
+}
+dt{
+    font-family: Arial ;
+    color:rgba(255, 174, 0, 0.877)
+}
+dd{
+    font-size: large;
+}
+ol{
+    font-style: inherit;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+ }
+ p:first-letter{
+font-size: 1.5em;
+ }
+ .about_movie{
+     display: none;
+ }
+ #hidden_list:hover .about_movie {
+    display: block;
+ }
