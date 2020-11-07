@@ -1,0 +1,111 @@
+<!--HTML forms generate and process user input, they allow
+    user to send data to server. Query string: set of parameters
+    passed from browser to webserver using name/value pairs at end of URL-->
+
+<HTML>
+    <head></head>
+    <body>
+        <form action="http://www.google.com/search" method="GET" enctype=""  novalidate 
+            autocomplete="on">
+            
+            <!--TEXT FIELD-->
+            <!--Value----initial value,  size----visible length of box
+                maxlength---max number of characters allowed
+                autocomplete--offers suggestion to autocomplete
+                autofocus---makes control initially recieve keyboards focus
+                novalidate--browser shouldn't validate before submitting
+                placeholder --- hint or example
+                pattern --- regex
+                required --- browser would show error if blank
+                -->
+            <input type="text" value="text field value" name="username" size="10" maxlength="*" 
+                pattern="[0-9]{10}" title="input should be (xxx-xxx-xxxx)" />
+
+
+            <!--CHECKBOX-->
+            <!--yes/no choices that can be checked and unchecked(inline)
+                checked attribute is used to initially check box-->
+            <input type="checkbox" name="student" />Student
+            <input type="checkbox" name="employee" checked/> Employee 
+
+            <!--RADIOBUTTON-->
+            <!--Grouped by name attribute, must specify value for each one or will be sent as on-->
+            <input type="radio" name="sex" value="female" checked/>Male
+            <input type="radio" name="sex" value="male"  checked/>Female
+
+
+             <!--RESET AND SUBMIT -----
+                reset returns all form controls to initial values,
+                sends all data with the specified method(GET/POST) to the action page
+                value attribute is used to customize text-->
+            <!--HIDDEN INPUT PARAMETER-----
+                An invisible paramer passed and cant be modified by user-->
+                <input type="reset" value="RESETER" />
+                <input type="submit" value="SUBMITER" />
+                <input type="hidden" name="school" value="2048" />
+
+                
+            <!--TEXTAREA
+                a multiline text input control, unlimited number of characters
+                size is shown as cols and rows attribute-->
+            <textarea rows="4" cols="20">
+                type your comments here.
+            </textarea>
+
+            <label> <input/> VISA</label>  <!--click text to activate control-->
+
+            <!--DROPDOWN list-->
+            <!--select and option elemetns -   menus of choices that collapse and expand
+                option - element represents each choice
+                select optional attributes: disabled, multiple, size
+                selected attribute sets initially chosen-->
+            <select name="favbook" disabled multiple size="1"> <!--no dropdown because multiple-->
+                <option>Book1</option>
+                <option>Book2</option>
+                <option selected>BestBook</option>
+                <option>Book4</option>
+            </select>
+
+            <!--OPTION GROUP-->
+            <select name = "favoritebooks" multiple size="6">
+                <optgroup label = "fiction">
+                    <option>book1</option>
+                    <option>book2</option>
+                    <option>book3</option>
+                </optgroup>
+                <optgroup label= "science">
+                    <option>book4</option>
+                    <option>book5</option>
+                    <option>book6</option>
+                </optgroub>
+            </select>
+
+           
+           
+
+            <!--GROUPING   FIELDSET    LEGEND
+                group of input fields with optional caption(block)-->
+            <fieldset>
+                <legend>Gender:</legend>
+                    <input type="radio" name="sex" value="female" checked/>Male
+                    <input type="radio" name="sex" value="male"  checked/>Female
+            </fieldset>
+        </form>
+    </body>
+</HTML>
+
+
+<!--REGEX RULES
+1. A dot . mathces exactly one-character except \n line break
+2. | means OR abc|def|g matches either of them
+3. () are for grouping (homer|marge)simpson   homersimpson margesimpson
+4. \ starts an escape sequence \/ \* \"
+5. * 0 or more
+6. + 1 or more
+7. ? 0 or 1
+8. {min, max}
+9. ^ represents begining of string or line
+10.$ represents the end of string
+11. [bcd]art group characters into character set bart, cart
+12. [^abcd] negates any character start with a,b,c,d
+\d digits    \D nondigit    \w words   \W non-words   \s whitespace    \S non whitespace

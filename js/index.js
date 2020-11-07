@@ -71,10 +71,14 @@ console.log(p === '1'); //strict equality (Type + value)
 console.log(p !== 0);
 console.log(p == '1'); //lose equality (value);
 
-
 //Ternary Operator
 let points = 110;
 let type = points > 100 ? 'gold':'silver';
 //if points > 100 true('gold') else ('silver')
 console.log(type);
 
+function pop(){
+    var box = document.getElementById("output");
+    box.setAttribute("value","thank you" );
+    console.log("clicked");
+}

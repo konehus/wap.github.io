@@ -12,8 +12,10 @@ Used --insert dynamic text to HTML
 //alert("Welcome to JavaScript");
 
 //Variables(case sensitive) and types(lossly typed)
-//Datatypes undefined, Boolean, Number, String, Symbol, Symbol,
+//Datatypes undefined, Boolean, Number, String, Symbol, 
 //Object, Function, null, NaN
+
+
 var name = 'Henok'; //type String
 let age = 29; //type number
 const PI = 3.14; //constant number
@@ -60,7 +62,7 @@ console.log("2" + 3); //23  concatenation
 let p = 1; //ALWAYS USE STRICT EQUALITY
 console.log(p === '1');//false strict equality (Type + value)  
 console.log(p !== 0);//true   strict !equality test(type & value)
-console.log(p == '1'); //true lose equality (value);
+console.log(p == "1"); //true lose equality (value);
 console.log(5 < "7");//true   "7" automatic conversion
 console.log(42.0 == 42); //true no double or int
 
@@ -79,10 +81,10 @@ console.log(s[0] + s[1] + s[2] + s[3] + s[4]); //can be accesses as []
 
 console.log('\'   \"   \t  \\');  //escape sequence
 let s1 = 10 + ""; //s1 = "10"   type of string
-let int = parseInt("42 is answer"); //42 typeof is number
+let int = parseInt("42.34 is answer"); //42 typeof is number
 let n1 = parseFloat("booyah"); //NaN
 
-//Boolean Type -- any values can be uses as boolean
+//Boolean Type -- any values can be used as boolean
 //"falsey" values: false, 0, 0.0, Nan, emptyString(""), null, undefined
 //"truthly" values: anything else
 var ILikeWebApps = "IE6" > 0; //false
@@ -136,6 +138,7 @@ function square(number){
     return number*number;
 }
 print();
+
 
 //function expression (semicolons are optional.)
 var printer = function(fName, lName){ //Anonymous function can be assigned as event handler

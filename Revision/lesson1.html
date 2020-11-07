@@ -1,0 +1,79 @@
+<!--HTML is for content, the information on the page
+    keep content separate from presentation(CSS)-->
+
+<html>
+    <head>
+
+        <meta name="description" content= "Learn HTML"/>  <!--data of data information describes the page itself-->
+        <link href="filename" type = "MIME type" rel="relationship"/>  <!--connect an image to link with page-->
+        <link href="lesson.css" type ="text/CSS" rel="stylesheet"/>  <!--using link emed separate CSS file(preferred)-->
+        <title>HTML TAGS</title>
+    </head>
+
+    <body>
+        <hr /><!--separation line-->
+        <br /> <!--break in the middle of element-->  
+
+
+        <!--Block Elements  start on a new line, contain
+        an entire large region of content-->
+        <div>div element</div>
+        <h1>header element</h6>
+        <p>paragraph element</p>
+        <pre>preformatted text preserves space and line break</pre>
+        <form>form element</form>
+
+        <blockquote><p>paragraph</p></blockquote> <!--length quotaion-->
+
+        <list>
+            <ul> <!--unordered list -bulleted list of items(block)-->
+                <li>unordered list</li><!--single item within list(block)-->
+                <li>unordered list</li>
+            </ul>
+            <ol><!--ordered list - numbered list of items(block) letters or roman numerals-->
+                <li>ordered list2</li>
+                <li>ordered list2</li>
+            </ol>
+            <dl> <!--definition list(block)-->
+                <dt>term</dt><!--Definition term-->
+                <dd>term explanation</dd><!--definintion term description-->
+
+                <dt></dt>
+                <dd></dd>
+            </dl>
+        </list>
+        
+        <table border= "1px solid black" > <!--2D table of rows and colums of data-->
+            <caption>Table Name</caption>    <!--labeles table meaning at table start-->
+            <tr> <!--row 1table rows of header(appear bold)-->
+                <th>table header1</th>
+                <th>table header2</th>
+                <th>table header3</th>
+            </tr>
+            <tr>
+                <td colspan="2">table data4</td>  <!--colspan makes a cell occupy multiple columns-->
+                <td rowspan="2">table data6</td>  <!--rospan multiple rows-->
+            </tr>
+            <tr>
+                <td>table data7</td>
+                <td>table data8</td>
+            </tr>
+        </table>    
+        
+        
+
+        <!--Inline Elements does not new line, affect
+        a small amount of conten-->
+        <span></span>
+        <a href="URL">inner HTML linked to URL</a>
+        <img src="path" alt="alternate" title="title to hover">
+        <q>quote</q><!--short quotation(inline)-->
+        <abbr title="abbrevation">abrv</abbr> <!--inline acronym or abbrevation shows when hover-->
+        <em>emphasize</em><!--italic-->              
+        <strong>Strong</strong><!--bold-->
+        <code>computer code</code>   <!--computer code-->
+
+        
+        <!--html encoding text    &lt; represents '<'    and       &gt; represents '>'    -->
+    </body>
+</html>

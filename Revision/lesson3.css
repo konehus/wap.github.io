@@ -1,0 +1,82 @@
+/*For layout purpose in box model, every element is composed of 
+    -actual element content
+    -border around element
+    -padding between content and border (inside)
+    -margin between the border and other content(outside)
+    
+    *width = content width + L/R padding + L/R border + L/R margin
+    *height = content height + T/B padding + T/B border + T/B margin
+
+
+
+BORDER PROPERTY
+-thickness(in px, pt, tm, thin) border-width, border-width
+-style(hidden, dotted, dashed, solid)
+-color(red)   *************************/
+
+h2 { border: 5px solid red; 
+     border-bottom: dotted;
+     border-left:10px;
+     border-style:dashed;
+     border-right-width: thick;}
+/*Each side's border properties can be se individually.
+
+DIMENSIONS
+for block elements and img element only.
+(width, height, max-width, max-height, min-width, min-height)*/
+p{width:300px; max-height: 1000px;}
+
+
+/******
+BOX SIZING
+content-box; initial and default value
+border-box; width and height properties include the content
+            padding and border, but not margin. ******/
+div3{
+    width:200px;
+    height:100px;
+    box-sizing:border-box;       
+}
+
+
+
+/*Rounded corners border-radius - border radius can be set individually, separated by spaces
+        1 value: all four corners are rounded equally
+        2 values: tl and br, tr and bl
+        3 values: tl, tr and bl, br
+        4 values: tl, tr, br, bl*******/
+div4{
+    border: 3px solid blue;
+    border-radius:12px;
+    border-radius:10px, 20px;
+}
+
+/*Padding shares the bG from the element. it has 4 properties*/
+p{
+    padding-left: 20px;
+    padding: 12px 10px 3px;
+}
+
+/*Margin are always transparent. It has 4 property values. Vertical margins on d/t elements that
+touch each other will collapse , forming a single margin equal to are greather than adjoining margins.
+
+margin: 10px     all share
+margin: 10px 20px    T & B, R & L
+margin: 10px 20px 30px T, R&L, B
+margin: 10px 30px 20px 4px T, R, B, L   ****/
+h2{
+    margin: 30px;    /**all sides have 30px margin**/
+
+}
+
+/*Centering a block element
+to align block elements center set width first, and margin:auto;
+to center inline elements within a blockelement, text-align : center;*/
+
+
+/***FOR FORMS INPUT
+    selector is input[type="text"]  or submit or reset or radio***/
+input[type="text"] {
+background-color: yellow;
+font-weight: bold;
+}

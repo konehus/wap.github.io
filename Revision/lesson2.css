@@ -1,0 +1,130 @@
+/**CSS give different visual styles to HTML elements, changing their default appearance**/
+/*********CSS*********/
+/***Bad Prcatice  1. tags like strong, em, u, and font are discouraged
+                  2. Embedded Syle sheets in head element of html file 
+                  3. Inline styles: style attribute within element tags ******************/
+
+/**CSS files consist one or more rules shown as selectors. the "*" selector is all elements**/
+/**property:value**/
+/**FONT PROPERTIES
+    font-family  type of font       "serif"
+   font-size    size of letters    unitValue or %
+   font-style   enable italics      italic oblique
+   font-weight   enable/disablebold  light bold bolder
+   font          sets of all font     style weigh size family   **/
+
+
+
+
+
+
+    /** 
+    SIZE UNITS
+    px number of pixels, pt number of points, em relative to the font-size, vw 1% relative to width, vh 1% relative to height of viewport
+
+    TEXT PROPTERTIES
+    text-align         left, center, right, justify
+    text-decoration    underline, overline, linethrough, blink
+    text-indent        a size(px, pt, %, em)
+    line-height        vertical spacing size
+    letter-spacing     horizontal gap b/n letters (size)
+    word-spacing       horizontal gap b/n words   (size)
+    
+    
+    BACKGROUND PROPERTIES
+    background-color        color
+    background-image        URL
+    background-poisiton     position of image(size)
+    background-repeat       how bgimage should be repeated
+    background-attachment   whether image scrolls, fixed
+    background-size         scaling of bgimage (size)
+    background              to set all backgrounds
+
+    
+    LIST PROPERTY
+    list-style-type    - none(no marker), disc, circle, square, decimal, decimal-leading-zero
+                         lower-roman, upper-roman, lower-alpha, upper-alpha, lower-greek
+
+    Inheriting Styles
+    styles inherited from containing elements.(Not all)
+    */
+
+    /**Cascading Style Sheet rules
+     properties of an element cascade in order
+        1. Browser's default style
+        2. External style sheet files
+        3. Internal style sheets
+        4. Inline style
+    
+    Cascading workds from top to bottom inside the page.
+    Elements in HTML inherit properties from parent elements.
+
+
+    Style Specificity
+    When multiple styles apply to an element, most specific one applies
+    if they have the same specificity, then the later one is used.
+    Rules with highest score wins ELEMNET-1   class-10    ID-100
+
+    id attribute  - allowes to give unique ID to any element on a page(only used ones)
+    class attribute - used to group some elements and give a style only group (uses many times)
+
+
+    Pseudo-classes- is used to define a special state of element
+          styling-element when    -hovering
+                                  -visited and unvisited
+                                  -focused
+            selector:pseudo-class{ property:value;}
+    pseudo-class can be - :active :focus :hover :link :visited     
+
+    Pseudo-element is used to style specified parts of element
+            style first letter, lin or element
+            insert content before content
+        selector::pseudo-element { property:value; }
+        pseudo-element can be   ::first-line    ::first-letter
+
+
+    DESCENDANT COMBINATOR - (space) combinator selects nodes that are descendants of first element
+    div span{                   //this will match all <span> elements that are inside a <div> element
+        color : red;       
+    }
+
+    CHILD COMBINATOR - (>) combinator selecs the nodes that are only direct children of first element
+    ul > li{                //this will match all <li> elements that are direct child of <ul> element
+        color : red;
+    }
+    */
+
+a:link{ color: red }
+
+body{
+    background-image:url("https://mdn.mozillademos.org/files/11983/starsolid.gif");
+    background-repeat: repeat-x;
+    background-position: 203px 20px;
+}
+
+    
+ p{    
+    color: white;
+    background-color: blue;
+    text-align: center;
+    line-height: 30px;
+    word-spacing: 30px;
+    text-indent: 50px;
+}
+
+h1{
+    font-family: Garamond, "Times New Roman", serif;
+}
+
+h2{
+    font-size: 34vw;
+    text-decoration: underline overline;    /**effects can be combined**/
+}
+
+h2#recent{
+    font-weight: bolder;
+}
+
+h3.awesome{
+    font-style: italic;
+}
